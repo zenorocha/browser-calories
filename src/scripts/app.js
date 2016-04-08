@@ -6,6 +6,8 @@ class App extends React.Component {
     super();
 
     this.state = {
+      success: undefined,
+      error: undefined,
       url: undefined
     };
   }
@@ -16,8 +18,29 @@ class App extends React.Component {
     }, (tabs) => {
       this.setState({
         url: tabs[0].url
-      });
+      }, this.measure);
     });
+  }
+
+  measure() {
+    var searchUrl = 'https://perf-facts.herokuapp.com?url=' + encodeURIComponent(this.state.url);
+
+    fetch(searchUrl)
+      .then((response) => {
+        return response.json();
+      })
+      .then((response) => {
+        if (response.statusCode >= 400) {
+          this.setState({
+            error: response.statusCode
+          });
+        }
+        else {
+          this.setState({
+            success: response
+          });
+        }
+      })
   }
 
   render() {
