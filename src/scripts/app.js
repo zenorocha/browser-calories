@@ -1,4 +1,5 @@
 import React from 'react';
+import Loader from './loader';
 
 class App extends React.Component {
   constructor() {
@@ -20,7 +21,7 @@ class App extends React.Component {
   }
 
   render() {
-    return this.state.url;
+    return <Loader url={this.state.url} />
   }
 }
 
