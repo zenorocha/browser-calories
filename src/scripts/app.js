@@ -1,5 +1,6 @@
 import React from 'react';
 import Loader from './loader';
+import Result from './result';
 
 class App extends React.Component {
   constructor() {
@@ -44,7 +45,12 @@ class App extends React.Component {
   }
 
   render() {
-    return <Loader url={this.state.url} />
+    if (this.state.success) {
+      return <Result success={this.state.success} />;
+    }
+    else {
+      return <Loader url={this.state.url} />;
+    }
   }
 }
 
