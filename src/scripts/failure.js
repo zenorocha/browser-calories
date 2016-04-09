@@ -2,13 +2,19 @@ import React from 'react';
 
 class Failure extends React.Component {
   render() {
+    let title = `Error ${this.props.error}`;
+
+    if (this.props.error === 400) {
+      title = 'URL can\'t be reached';
+    }
+
     return (
       <div className="status">
-        <img className="status-geek" src="https://browserdiet.com/assets/img/46.png" alt="Superman" />
+        <img className="status-geek" src="https://browserdiet.com/assets/img/46.png" alt="Geek" />
         <img className="status-rays" src="https://browserdiet.com/assets/img/rays.png" alt="Rays" />
         <div className="status-msg">
-          <p>Error {this.props.error}</p>
-          <p>Please try again later</p>
+          <p>{title}</p>
+          <p>Try again on another tab or fill an <a href={"https://github.com/zenorocha/browser-calories-chrome/issues/new?title=Error+" + this.props.error + "&body=URL%3A+" + this.props.url} target="_blank">issue on GitHub</a></p>
         </div>
       </div>
     )

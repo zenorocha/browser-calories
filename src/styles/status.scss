@@ -20,15 +20,20 @@
   font-family: 'Open Sans',sans-serif;
   padding: 10px;
   text-align: center;
-}
 
-.status-msg p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
-  &:first-child {
-    font-size: 18px;
+    &:first-child {
+      font-size: 18px;
+    }
+  }
+
+  a {
+    color: #ffde00;
+    border-bottom: 1px solid #ffde00;
   }
 }
 
