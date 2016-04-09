@@ -3,13 +3,13 @@ import React from 'react';
 class Result extends React.Component {
   render() {
     return (
-      <div className="performance-facts">
-        <header className="performance-facts__header">
-          <h1 className="performance-facts__title">Performance Facts</h1>
+      <div className="facts">
+        <header className="facts-header">
+          <h1 className="facts-title">Performance Facts</h1>
           <p>Serving Size 1 website</p>
           <p>Servings Per Refresh 1</p>
         </header>
-        <table className="performance-facts__table">
+        <table className="facts-table">
           <thead>
             <tr>
               <th colSpan="3" className="small-info">
@@ -80,7 +80,7 @@ class Result extends React.Component {
           </tbody>
         </table>
         <p className="small-info">* Values are based on an <a target="_blank" href="http://httparchive.org/interesting.php">average <span className="budgetBytes-total"></span> website</a>. Your daily values may be higher or lower depending on your needs:</p>
-        <table className="performance-facts__table--small small-info">
+        <table className="facts-table-small small-info">
           <thead>
             <tr>
               <td colSpan="2"></td>

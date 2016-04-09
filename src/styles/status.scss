@@ -1,52 +1,47 @@
 .status-geek {
-	display: block;
-	margin: 0 auto;
-	padding: 20px;
-	height: 315px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  height: 315px;
 }
 
 .status-rays {
-	position: absolute;
-	left: -100px;
-	top: -100px;
-	z-index: -1;
-	-webkit-animation: 20s rays infinite linear;
-	-moz-animation: 20s rays infinite linear;
-	-o-animation: 20s rays infinite linear;
-	animation: 20s rays infinite linear;
+  -webkit-animation: 20s rays infinite linear;
+  animation: 20s rays infinite linear;
+  position: absolute;
+  left: -100px;
+  top: -100px;
+  z-index: -1;
 }
 
 .status-msg {
-	text-align: center;
-    font-family: 'Open Sans',sans-serif;
-    color: white;
-    background: #e60014;
-	color: #ffde00;
-	padding: 10px;
+  background: #e60014;
+  color: #ffde00;
+  font-family: 'Open Sans',sans-serif;
+  padding: 10px;
+  text-align: center;
 }
 
 .status-msg p {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
-.status-msg p:first-child {
-	font-size: 18px;
+  &:first-child {
+    font-size: 18px;
+  }
 }
 
 @-webkit-keyframes rays {
-	to { -webkit-transform: rotate(360deg); }
-}
-
-@-moz-keyframes rays {
-	to { -moz-transform: rotate(360deg); }
-}
-
-@-o-keyframes rays {
-	to { -o-transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
 }
 
 @keyframes rays {
-	to { transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
 }

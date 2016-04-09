@@ -22,7 +22,7 @@
     "start": "npm run build",
     "build": "npm run build:scripts && npm run build:styles",
     "build:scripts": "browserify src/scripts/main.js -t [ babelify --presets [ es2015 react ] ] -o dist/scripts/main.js",
-    "build:styles": "node-sass src/styles/main.scss dist/styles/main.css --output-style compressed -q",
+    "build:styles": "node-sass src/styles/main.scss dist/styles/main.css -q",
     "watch": "parallelshell 'npm run watch:scripts' 'npm run watch:styles'",
     "watch:scripts": "onchange 'src/scripts/*.js' -- npm run build:scripts",
     "watch:styles": "onchange 'src/styles/*.scss' -- npm run build:styles"
