@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Browser Calories",
   "description": "Measure your performance budget",
-  "version": "1.0",
+  "version": "0.0.1",
   "browser_action": {
     "default_popup": "popup.html"
   },

@@ -1,0 +1,113 @@
+.performance-facts {
+  background: white;
+  border: 1px solid black;
+  float: left;
+  width: 320px;
+  padding: 0.7rem 0.5rem;
+
+  table {
+    border-collapse: collapse;
+  }
+}
+
+.performance-facts__title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.performance-facts__header {
+  border-bottom: 10px solid black;
+  padding: 0 0 0.25rem 0;
+  margin: 0 0 0.5rem 0;
+
+  p {
+    margin: 0;
+  }
+}
+
+.performance-facts__table {
+  width: 100%;
+
+  thead tr {
+    th, td {
+      border: 0;
+    }
+  }
+
+  th, td {
+    font-weight: normal;
+    text-align: left;
+    padding: 0.25rem 0;
+    border-top: 1px solid black;
+    white-space: nowrap;
+  }
+
+  td {
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  .blank-cell {
+    width: 1rem;
+    border-top: 0;
+  }
+
+  .thick-row {
+    th, td {
+      border-top-width: 5px;
+    }
+  }
+}
+
+.small-info {
+  font-size: 0.7rem;
+}
+
+.performance-facts__table--small {
+  @extend .performance-facts__table;
+  border-bottom: 1px solid #999;
+  margin: 0 0 0.5rem 0;
+
+  thead {
+    tr {
+      border-bottom: 1px solid black;
+    }
+  }
+
+  td {
+    &:last-child {
+      text-align: left;
+    }
+  }
+
+  th, td {
+    border: 0;
+    padding: 0;
+  }
+}
+
+.performance-facts__table--grid {
+  @extend .performance-facts__table;
+  margin: 0 0 0.5rem 0;
+
+  td {
+    &:last-child {
+      text-align: left;
+      &::before {
+        content: "•";
+        font-weight: bold;
+        margin: 0 0.25rem 0 0;
+      }
+    }
+  }
+}
+
+.thick-end {
+  border-bottom: 10px solid black;
+}
+
+.thin-end {
+  border-bottom: 1px solid black;
+}

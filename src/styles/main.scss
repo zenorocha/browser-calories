@@ -1,0 +1,22 @@
+body {
+  background: #ffde00;
+  font-family: sans-serif;
+  font-size: small;
+  line-height: 1.4;
+  margin: 0;
+}
+
+a {
+  color: black;
+}
+
+p {
+  margin: 0;
+}
+
+#wrapper {
+  width: 338px;
+}
+
+@import 'result.scss';
+@import 'status.scss';

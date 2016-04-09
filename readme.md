@@ -10,7 +10,7 @@
 npm install
 ```
 
-2) Transpile scripts:
+2) Compile scripts and styles:
 
 ```
 npm start
