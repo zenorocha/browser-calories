@@ -13,6 +13,6 @@
   },
   "permissions": [
     "activeTab",
-    "https://perf-facts.herokuapp.com/"
+    "https://calories.browserdiet.com/"
   ]
 }

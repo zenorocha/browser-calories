@@ -25,9 +25,9 @@ class App extends React.Component {
   }
 
   measure() {
-    var searchUrl = 'https://perf-facts.herokuapp.com?url=' + encodeURIComponent(this.state.url);
+    let api = 'https://calories.browserdiet.com/?url=' + encodeURIComponent(this.state.url);
 
-    fetch(searchUrl)
+    fetch(api)
       .then((response) => {
         return response.json();
       })
@@ -42,7 +42,7 @@ class App extends React.Component {
             success: response
           });
         }
-      })
+      });
   }
 
   render() {
