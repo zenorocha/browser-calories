@@ -51,10 +51,10 @@ class Result extends React.Component {
             <tr>
               <th colSpan="2">
                 <b>Total Size </b>
-                <span className="siteBytes-total">{siteBytes.total}</span>
+                <span>{siteBytes.total}</span>
               </th>
               <td>
-                Resources <span className="numberResources"></span>
+                Resources <span></span>
               </td>
             </tr>
             <tr className="thick-row">
@@ -65,84 +65,112 @@ class Result extends React.Component {
             <tr>
               <th colSpan="2">
                 <b>HTML </b>
-                <span className="siteBytes-html">{siteBytes.html}</span>
+                <span>{siteBytes.html}</span>
               </th>
               <td>
-                <b><span className="dailyPercentage-html">{dailyPercentage.html}</span></b>
+                <b><span>{dailyPercentage.html}</span></b>
               </td>
             </tr>
             <tr>
               <th colSpan="2">
                 <b>Images </b>
-                <span className="siteBytes-image">{siteBytes.image}</span>
+                <span>{siteBytes.image}</span>
               </th>
               <td>
-                <b><span className="dailyPercentage-image">{dailyPercentage.image}</span></b>
+                <b><span>{dailyPercentage.image}</span></b>
               </td>
             </tr>
             <tr>
               <th colSpan="2">
                 <b>CSS </b>
-                <span className="siteBytes-css">{siteBytes.css}</span>
+                <span>{siteBytes.css}</span>
               </th>
               <td>
-                <b><span className="dailyPercentage-css">{dailyPercentage.css}</span></b>
+                <b><span>{dailyPercentage.css}</span></b>
               </td>
             </tr>
             <tr>
               <th colSpan="2">
                 <b>JavaScript </b>
-                <span className="siteBytes-js">{siteBytes.js}</span>
+                <span>{siteBytes.js}</span>
               </th>
               <td>
-                <b><span className="dailyPercentage-js">{dailyPercentage.js}</span></b>
+                <b><span>{dailyPercentage.js}</span></b>
+              </td>
+            </tr>
+            <tr>
+              <th colSpan="2">
+                <b>Fonts </b>
+                <span>{siteBytes.font}</span>
+              </th>
+              <td>
+                <b><span>{dailyPercentage.font}</span></b>
+              </td>
+            </tr>
+            <tr>
+              <th colSpan="2">
+                <b>Video </b>
+                <span>{siteBytes.video}</span>
+              </th>
+              <td>
+                <b><span>{dailyPercentage.video}</span></b>
               </td>
             </tr>
             <tr className="thick-end">
               <th colSpan="2">
                 <b>Other </b>
-                <span className="siteBytes-other">{siteBytes.other}</span>
+                <span>{siteBytes.other}</span>
               </th>
               <td>
-                <b><span className="dailyPercentage-other">{dailyPercentage.other}</span></b>
+                <b><span>{dailyPercentage.other}</span></b>
               </td>
             </tr>
           </tbody>
         </table>
-        <p className="small-info">* Values are based on an <a target="_blank" href="http://httparchive.org/interesting.php">average <span className="budgetBytes-total"></span> website</a>. Your daily values may be higher or lower depending on your needs:</p>
+        <p className="small-info">* Values are based on an <a target="_blank" href="http://httparchive.org/interesting.php">average website</a>. Your daily values may be higher or lower depending on your needs:</p>
         <table className="facts-table-small small-info">
           <thead>
             <tr>
               <td colSpan="2"></td>
               <th>Size:</th>
-              <th><span className="budgetBytes-total">{budgetBytes.total}</span></th>
+              <th><span>{budgetBytes.total}</span></th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th colSpan="2">HTML</th>
               <td>Less than</td>
-              <td><span className="budgetBytes-html">{budgetBytes.html}</span></td>
+              <td><span>{budgetBytes.html}</span></td>
             </tr>
             <tr>
               <th colSpan="2">Images</th>
               <td>Less than</td>
-              <td><span className="budgetBytes-image">{budgetBytes.image}</span></td>
+              <td><span>{budgetBytes.image}</span></td>
             </tr>
             <tr>
               <th colSpan="2">CSS</th>
               <td>Less than</td>
-              <td><span className="budgetBytes-css">{budgetBytes.css}</span></td>
+              <td><span>{budgetBytes.css}</span></td>
             </tr>
             <tr>
               <th colSpan="2">JavaScript</th>
               <td>Less than</td>
-              <td><span className="budgetBytes-js">{budgetBytes.js}</span></td>
+              <td><span>{budgetBytes.js}</span></td>
+            </tr>
+            <tr>
+              <th colSpan="2">Fonts</th>
+              <td>Less than</td>
+              <td><span>{budgetBytes.font}</span></td>
+            </tr>
+            <tr>
+              <th colSpan="2">Video</th>
+              <td>Less than</td>
+              <td><span>{budgetBytes.video}</span></td>
             </tr>
             <tr>
               <th colSpan="2">Other</th>
               <td>Less than</td>
-              <td><span className="budgetBytes-other">{budgetBytes.other}</span></td>
+              <td><span>{budgetBytes.other}</span></td>
             </tr>
           </tbody>
         </table>
