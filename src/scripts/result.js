@@ -28,7 +28,7 @@ class Result extends React.Component {
   }
 
   render() {
-    let cleanUrl = this.props.url.replace(/^http(s)?\:\/\//i, "");
+    let cleanUrl = this.props.url.replace(/^http(s)?\:\/\/(www.)?/i, "");
     let siteBytes = this.toBytes(this.props.success);
     let budgetBytes = this.toBytes(budget);
     let dailyPercentage = this.toPercentage(this.props.success, budget);
@@ -42,29 +42,18 @@ class Result extends React.Component {
             <a className="facts-url" href={this.props.url} title={cleanUrl} target="_blank">{cleanUrl}</a>
           </p>
         </header>
-        <table className="facts-table">
+        <table className="facts-table facts-table-main">
           <thead>
-            <tr>
-              <th colSpan="3" className="small-info">
+            <tr className="small-info">
+              <th colSpan="2">
                 Amount Per Serving
               </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th colSpan="2">
-                <b>Total Size </b>
-                <span>{siteBytes.total}</span>
-              </th>
               <td>
-                Resources <span></span>
-              </td>
-            </tr>
-            <tr className="thick-row">
-              <td colSpan="3" className="small-info">
                 <b>% Per Load *</b>
               </td>
             </tr>
+          </thead>
+          <tbody>
             <tr>
               <th colSpan="2">
                 <b>HTML </b>
@@ -119,7 +108,7 @@ class Result extends React.Component {
                 <b><span>{dailyPercentage.video}</span></b>
               </td>
             </tr>
-            <tr className="thick-end">
+            <tr>
               <th colSpan="2">
                 <b>Other </b>
                 <span>{siteBytes.other}</span>
@@ -128,17 +117,21 @@ class Result extends React.Component {
                 <b><span>{dailyPercentage.other}</span></b>
               </td>
             </tr>
+            <tr>
+              <th colSpan="2">
+                <b>Total Size </b>
+                <span>{siteBytes.total}</span>
+              </th>
+              <td>
+                <b><span>{dailyPercentage.total}</span></b>
+              </td>
+            </tr>
           </tbody>
         </table>
-        <p className="small-info">* Values are based on an <a target="_blank" href="http://httparchive.org/interesting.php">average website</a>. Your daily values may be higher or lower depending on your needs:</p>
-        <table className="facts-table-small small-info">
-          <thead>
-            <tr>
-              <td colSpan="2"></td>
-              <th>Size:</th>
-              <th><span>{budgetBytes.total}</span></th>
-            </tr>
-          </thead>
+        <p className="facts-table-small-header small-info">
+          * Values are based on an <a target="_blank" href="http://httparchive.org/interesting.php">average website</a>. Your daily values may be higher or lower depending on your needs:
+        </p>
+        <table className="facts-table facts-table-small small-info">
           <tbody>
             <tr>
               <th colSpan="2">HTML</th>
@@ -175,8 +168,17 @@ class Result extends React.Component {
               <td>Less than</td>
               <td><span>{budgetBytes.other}</span></td>
             </tr>
+            <tr>
+              <th colSpan="2">Total Size</th>
+              <td>Less than</td>
+              <td><span>{budgetBytes.total}</span></td>
+            </tr>
           </tbody>
         </table>
+        <p className="facts-table-small-footer small-info">
+          This is an open source tool, contribute on <a href="https://github.com/zenorocha/browser-calories-chrome" target="_blank">GitHub</a><br />
+          You can find tips to improve your website at <a href="https://browserdiet.com/en/" target="_blank">browserdiet.com</a>
+        </p>
       </div>
     )
   }

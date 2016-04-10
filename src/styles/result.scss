@@ -2,8 +2,8 @@
   background: white;
   border: 1px solid black;
   float: left;
+  padding: 0.9rem 0.5rem;
   width: 320px;
-  padding: 0.7rem 0.5rem;
 
   table {
     border-collapse: collapse;
@@ -11,7 +11,6 @@
 }
 
 .facts-header {
-  border-bottom: 10px solid black;
   padding: 0 0 0.25rem 0;
   margin: 0 0 0.5rem 0;
 
@@ -23,7 +22,7 @@
 .facts-title {
   font-weight: bold;
   font-size: 2rem;
-  margin: 0 0 0.25rem 0;
+  margin: 0;
 }
 
 .facts-url {
@@ -59,43 +58,39 @@
     white-space: nowrap;
   }
 
-  td {
-    &:last-child {
-      text-align: right;
-    }
+  td:last-child {
+    text-align: right;
   }
+}
 
-  .blank-cell {
-    width: 1rem;
-    border-top: 0;
-  }
+.facts-table-main {
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  margin: 0 0 0.7rem 0;
 
-  .thick-row {
+  tr:last-child {
     th, td {
       border-top-width: 5px;
     }
   }
 }
 
-.small-info {
-  font-size: 0.7rem;
-}
-
 .facts-table-small {
-  @extend .facts-table;
-  border-bottom: 1px solid #999;
-  margin: 0 0 0.5rem 0;
+  color: #797979;
+  margin: 0.3rem 0;
 
-  thead {
-    tr {
-      border-bottom: 1px solid black;
+  tr {
+    &:first-child {
+      margin-top: 0.3rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0.3rem;
     }
   }
 
-  td {
-    &:last-child {
-      text-align: left;
-    }
+  td:last-child {
+    text-align: left;
   }
 
   th, td {
@@ -104,10 +99,20 @@
   }
 }
 
-.thick-end {
-  border-bottom: 10px solid black;
+.facts-table-small-header {
+  border-bottom: 1px solid #999;
+  color: #797979;
+  margin-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
 
-.thin-end {
-  border-bottom: 1px solid black;
+.facts-table-small-footer {
+  border-top: 1px solid #999;
+  margin-top: 0.3rem;
+  padding-top: 0.3rem;
+  text-align: center;
+}
+
+.small-info {
+  font-size: 0.7rem;
 }
