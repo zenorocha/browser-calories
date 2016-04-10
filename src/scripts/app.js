@@ -47,10 +47,10 @@ class App extends React.Component {
 
   render() {
     if (this.state.success) {
-      return <Result success={this.state.success} />;
+      return <Result url={this.state.url} success={this.state.success} />;
     }
     else if (this.state.error) {
-      return <Failure error={this.state.error} url={this.state.url} />;
+      return <Failure url={this.state.url} error={this.state.error} />;
     }
     else {
       return <Loader url={this.state.url} />;
