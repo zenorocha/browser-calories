@@ -20,11 +20,23 @@ class Result extends React.Component {
 
     for (var prop in a) {
       if (a.hasOwnProperty(prop) && b.hasOwnProperty(prop)) {
-        obj[prop] = Math.round((a[prop] / b[prop]) * 100) + '%';
+        obj[prop] = Math.round((a[prop] / b[prop]) * 100);
       }
     }
 
     return obj;
+  }
+
+  isPositive(number) {
+    let className = 'facts-percentage ';
+
+    if (number >= 100) {
+      className += 'bad';
+    } else {
+      className += 'good';
+    }
+
+    return className;
   }
 
   render() {
@@ -60,7 +72,7 @@ class Result extends React.Component {
                 <span>{siteBytes.html}</span>
               </th>
               <td>
-                <b><span>{dailyPercentage.html}</span></b>
+                <b><span className={this.isPositive(dailyPercentage.html)}>{dailyPercentage.html}%</span></b>
               </td>
             </tr>
             <tr>
@@ -69,7 +81,7 @@ class Result extends React.Component {
                 <span>{siteBytes.image}</span>
               </th>
               <td>
-                <b><span>{dailyPercentage.image}</span></b>
+                <b><span className={this.isPositive(dailyPercentage.image)}>{dailyPercentage.image}%</span></b>
               </td>
             </tr>
             <tr>
@@ -78,7 +90,7 @@ class Result extends React.Component {
                 <span>{siteBytes.css}</span>
               </th>
               <td>
-                <b><span>{dailyPercentage.css}</span></b>
+                <b><span className={this.isPositive(dailyPercentage.css)}>{dailyPercentage.css}%</span></b>
               </td>
             </tr>
             <tr>
@@ -87,7 +99,7 @@ class Result extends React.Component {
                 <span>{siteBytes.js}</span>
               </th>
               <td>
-                <b><span>{dailyPercentage.js}</span></b>
+                <b><span className={this.isPositive(dailyPercentage.js)}>{dailyPercentage.js}%</span></b>
               </td>
             </tr>
             <tr>
@@ -96,7 +108,7 @@ class Result extends React.Component {
                 <span>{siteBytes.font}</span>
               </th>
               <td>
-                <b><span>{dailyPercentage.font}</span></b>
+                <b><span className={this.isPositive(dailyPercentage.font)}>{dailyPercentage.font}%</span></b>
               </td>
             </tr>
             <tr>
@@ -105,7 +117,7 @@ class Result extends React.Component {
                 <span>{siteBytes.video}</span>
               </th>
               <td>
-                <b><span>{dailyPercentage.video}</span></b>
+                <b><span className={this.isPositive(dailyPercentage.video)}>{dailyPercentage.video}%</span></b>
               </td>
             </tr>
             <tr>
@@ -114,7 +126,7 @@ class Result extends React.Component {
                 <span>{siteBytes.other}</span>
               </th>
               <td>
-                <b><span>{dailyPercentage.other}</span></b>
+                <b><span className={this.isPositive(dailyPercentage.other)}>{dailyPercentage.other}%</span></b>
               </td>
             </tr>
             <tr>
@@ -123,7 +135,7 @@ class Result extends React.Component {
                 <span>{siteBytes.total}</span>
               </th>
               <td>
-                <b><span>{dailyPercentage.total}</span></b>
+                <b><span className={this.isPositive(dailyPercentage.total)}>{dailyPercentage.total}%</span></b>
               </td>
             </tr>
           </tbody>

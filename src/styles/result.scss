@@ -73,6 +73,23 @@
       border-top-width: 5px;
     }
   }
+
+  .facts-percentage {
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    min-width: 34px;
+    padding: 0px 4px;
+    text-align: center;
+
+    &.good {
+      background: #6bc500;
+    }
+
+    &.bad {
+      background: #e60014;
+    }
+  }
 }
 
 .facts-table-small {
