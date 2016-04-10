@@ -1,6 +1,6 @@
 {
   "name": "browser-calories-chrome",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "src/scripts/main.js",
   "license": "MIT",
