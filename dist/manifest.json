@@ -2,6 +2,7 @@
   "manifest_version": 2,
   "name": "Browser Calories",
   "description": "Measure your performance budget",
+  "homepage_url": "https://github.com/zenorocha/browser-calories-chrome",
   "version": "1.0.0",
   "browser_action": {
     "default_popup": "popup.html"
@@ -13,6 +14,11 @@
   },
   "permissions": [
     "activeTab",
+    "storage",
     "https://calories.browserdiet.com/"
-  ]
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  }
 }

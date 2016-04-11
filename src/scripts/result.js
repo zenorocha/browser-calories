@@ -1,5 +1,4 @@
 import React from 'react';
-import budget from '../data/budget';
 import bytes from 'byte-size';
 
 class Result extends React.Component {
@@ -20,7 +19,11 @@ class Result extends React.Component {
 
     for (var prop in a) {
       if (a.hasOwnProperty(prop) && b.hasOwnProperty(prop)) {
-        obj[prop] = Math.round((a[prop] / b[prop]) * 100);
+        if (a[prop] === 0 || b[prop] === 0 ) {
+          obj[prop] = 0;
+        } else {
+          obj[prop] = Math.round((a[prop] / b[prop]) * 100);
+        }
       }
     }
 
@@ -39,11 +42,15 @@ class Result extends React.Component {
     return className;
   }
 
+  openSettings() {
+    chrome.runtime.openOptionsPage();
+  }
+
   render() {
     let cleanUrl = this.props.url.replace(/^http(s)?\:\/\/(www.)?/i, "");
     let siteBytes = this.toBytes(this.props.success);
-    let budgetBytes = this.toBytes(budget);
-    let dailyPercentage = this.toPercentage(this.props.success, budget);
+    let budgetBytes = this.toBytes(this.props.budget);
+    let dailyPercentage = this.toPercentage(this.props.success, this.props.budget);
 
     return (
       <div className="facts">
@@ -140,9 +147,7 @@ class Result extends React.Component {
             </tr>
           </tbody>
         </table>
-        <p className="facts-table-small-header small-info">
-          * Values are based on an <a target="_blank" href="http://httparchive.org/interesting.php">average website</a>. Your daily values may be higher or lower depending on your needs:
-        </p>
+        <p className="facts-table-small-header small-info">* Values are based on an <a target="_blank" href="http://httparchive.org/interesting.php">average website</a>, but feel free to <a onClick={this.openSettings}>change your performance budget</a>. These values may be higher or lower depending on your needs:</p>
         <table className="facts-table facts-table-small small-info">
           <tbody>
             <tr>

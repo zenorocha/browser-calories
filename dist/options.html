@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Browser Calories</title>
+  <style>
+    .input-container {
+      clear: both;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .input-container label {
+      display: inline-block;
+      width: 65px;
+    }
+
+    .input-container input[type='number'] {
+      width: 100px;
+    }
+
+    .description {
+      color: grey;
+      font-style: italic;
+    }
+
+    .status {
+      display: none;
+      margin-left: 10px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h3>Budget</h3>
+    <p class="description">Values are defined in bytes</p>
+
+    <div class="input-container">
+      <label for="html">HTML</label>
+      <input type="number" id="html" name="html" value="" required min="0" max="5000000">
+    </div class="input-container">
+
+    <div class="input-container">
+      <label for="images">Images</label>
+      <input type="number" id="image" name="image" value="" required min="0" max="5000000">
+    </div class="input-container">
+
+    <div class="input-container">
+      <label for="css">CSS</label>
+      <input type="number" id="css" name="css" value="" required min="0" max="5000000">
+    </div class="input-container">
+
+    <div class="input-container">
+      <label for="js">JavaScript</label>
+      <input type="number" id="js" name="js" value="" required min="0" max="5000000">
+    </div class="input-container">
+
+    <div class="input-container">
+      <label for="font">Fonts</label>
+      <input type="number" id="font" name="font" value="" required min="0" max="5000000">
+    </div class="input-container">
+
+    <div class="input-container">
+      <label for="video">Video</label>
+      <input type="number" id="video" name="video" value="" required min="0" max="5000000">
+    </div class="input-container">
+
+    <div class="input-container">
+      <label for="other">Other</label>
+      <input type="number" id="other" name="other" value="" required min="0" max="5000000">
+    </div class="input-container">
+
+    <button>Save</button>
+    <span class="status">Options saved!</span>
+  </form>
+
+  <script src="options.js"></script>
+</body>
+</html>
