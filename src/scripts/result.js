@@ -47,7 +47,7 @@ class Result extends React.Component {
   }
 
   render() {
-    let cleanUrl = this.props.url.replace(/^http(s)?\:\/\/(www.)?/i, "");
+    let cleanUrl = this.props.url.replace(/^http(s)?\:\/\/(www.)?/i, "").replace(/\/$/, "");
     let siteBytes = this.toBytes(this.props.success);
     let budgetBytes = this.toBytes(this.props.budget);
     let dailyPercentage = this.toPercentage(this.props.success, this.props.budget);
@@ -58,7 +58,7 @@ class Result extends React.Component {
           <h1 className="facts-title">Performance Facts</h1>
           <p>
             Serving Size 1 website
-            <a className="facts-url" href={this.props.url} title={cleanUrl} target="_blank">{cleanUrl}</a>
+            <a className="facts-url" href={this.props.url} title={this.props.url} target="_blank">{cleanUrl}</a>
           </p>
         </header>
         <table className="facts-table facts-table-main">
