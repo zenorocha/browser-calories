@@ -1,31 +1,31 @@
 .input-container {
-      clear: both;
-      display: block;
-      margin-bottom: 10px;
-    }
+  clear: both;
+  display: block;
+  margin-bottom: 10px;
+}
 
-    .input-container label {
-      display: inline-block;
-      width: 65px;
-    }
+.input-container label {
+  display: inline-block;
+  width: 65px;
+}
 
-    .input-container input[type='number'] {
-      width: 100px;
-    }
+.input-container input[type='number'] {
+  width: 100px;
+}
 
-    .description {
-      color: grey;
-      font-style: italic;
-    }
+.description {
+  color: grey;
+  font-style: italic;
+}
 
-    .button {
-      cursor: pointer;
-      margin-top: 10px;
-      margin-right: 5px;
-    }
+.button {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 5px;
+}
 
-    .status {
-      display: none;
-      margin-left: 5px;
-      font-style: italic;
-    }
+.status {
+  display: none;
+  margin-left: 5px;
+  font-style: italic;
+}
