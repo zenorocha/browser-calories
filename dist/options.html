@@ -24,9 +24,15 @@
       font-style: italic;
     }
 
+    .button {
+      cursor: pointer;
+      margin-top: 10px;
+      margin-right: 5px;
+    }
+
     .status {
       display: none;
-      margin-left: 10px;
+      margin-left: 5px;
       font-style: italic;
     }
   </style>
@@ -71,8 +77,9 @@
       <input type="number" id="other" name="other" value="" required min="0" max="5000000">
     </div class="input-container">
 
-    <button>Save</button>
-    <span class="status">Options saved!</span>
+    <button class="button" type="submit">Save</button>
+    <button class="button" type="button" id="reset">Reset</button>
+    <span class="status">Budget saved!</span>
   </form>
 
   <script src="options.js"></script>

@@ -1,19 +1,22 @@
-document.addEventListener('DOMContentLoaded', restore);
+document.addEventListener('DOMContentLoaded', restoreBudget);
 
-function restore() {
+var defaultBudget = {
+  "html"  : 66000,
+  "image" : 1463000,
+  "css"   : 78000,
+  "js"    : 360000,
+  "font"  : 124000,
+  "video" : 200000,
+  "other" : 4000,
+  "total" : 2295000
+};
+
+function restoreBudget() {
   var form = document.querySelector('form');
-  form.addEventListener('submit', save);
+  var reset = document.querySelector('#reset');
 
-  var defaultBudget = {
-    "html"  : 66000,
-    "image" : 1463000,
-    "css"   : 78000,
-    "js"    : 360000,
-    "font"  : 124000,
-    "video" : 200000,
-    "other" : 4000,
-    "total" : 2295000
-  };
+  form.addEventListener('submit', saveBudget);
+  reset.addEventListener('click', resetBudget);
 
   chrome.storage.sync.get(defaultBudget, function(data) {
     form.html.value  = data.html;
@@ -26,7 +29,7 @@ function restore() {
   });
 }
 
-function save(e) {
+function saveBudget(e) {
   e.preventDefault();
 
   var budget = {
@@ -50,4 +53,16 @@ function save(e) {
       status.style.display = 'none';
     }, 750);
   });
+}
+
+function resetBudget() {
+  var form = document.querySelector('form');
+
+  form.html.value  = defaultBudget.html;
+  form.image.value = defaultBudget.image;
+  form.css.value   = defaultBudget.css;
+  form.js.value    = defaultBudget.js;
+  form.font.value  = defaultBudget.font;
+  form.video.value = defaultBudget.video;
+  form.other.value = defaultBudget.other;
 }
