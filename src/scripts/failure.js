@@ -10,8 +10,8 @@ class Failure extends React.Component {
 
     return (
       <div className="status">
-        <img className="status-geek" src="https://browserdiet.com/assets/img/46.png" alt="Geek" />
-        <img className="status-rays" src="https://browserdiet.com/assets/img/rays.png" alt="Rays" />
+        <img className="status-geek" src="../images/error.png" alt="Geek" />
+        <img className="status-rays" src="../images/rays.png" alt="Rays" />
         <div className="status-msg">
           <p>{title}</p>
           <p>Try again on another tab or fill an <a href={"https://github.com/zenorocha/browser-calories-chrome/issues/new?title=Error+" + this.props.error + "&body=URL%3A+" + this.props.url} target="_blank">issue on GitHub</a></p>
