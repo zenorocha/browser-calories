@@ -1,6 +1,6 @@
 {
   "name": "browser-calories-chrome",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Measure your performance budget",
   "main": "src/scripts/popup.js",
   "license": "MIT",
