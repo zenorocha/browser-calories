@@ -5,9 +5,7 @@ var defaultBudget = {
   "image" : 1001000,
   "css"   : 67000,
   "js"    : 357000,
-  "font"  : 31000,
-  "video" : 156000,
-  "other" : 2000,
+  "other" : 189000,
   "total" : 1678000
 };
 
@@ -23,8 +21,6 @@ function restoreBudget() {
     form.image.value = data.image;
     form.css.value   = data.css;
     form.js.value    = data.js;
-    form.font.value  = data.font;
-    form.video.value = data.video;
     form.other.value = data.other;
   });
 }
@@ -37,8 +33,6 @@ function saveBudget(e) {
     image : parseInt(e.target.image.value, 10),
     css   : parseInt(e.target.css.value, 10),
     js    : parseInt(e.target.js.value, 10),
-    font  : parseInt(e.target.font.value, 10),
-    video : parseInt(e.target.video.value, 10),
     other : parseInt(e.target.other.value, 10)
   };
 
@@ -62,7 +56,5 @@ function resetBudget() {
   form.image.value = defaultBudget.image;
   form.css.value   = defaultBudget.css;
   form.js.value    = defaultBudget.js;
-  form.font.value  = defaultBudget.font;
-  form.video.value = defaultBudget.video;
   form.other.value = defaultBudget.other;
 }

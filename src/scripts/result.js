@@ -111,24 +111,6 @@ class Result extends React.Component {
             </tr>
             <tr>
               <th colSpan="2">
-                <b>Fonts </b>
-                <span>{siteBytes.font}</span>
-              </th>
-              <td>
-                <b><span className={this.isPositive(dailyPercentage.font)}>{dailyPercentage.font}%</span></b>
-              </td>
-            </tr>
-            <tr>
-              <th colSpan="2">
-                <b>Video </b>
-                <span>{siteBytes.video}</span>
-              </th>
-              <td>
-                <b><span className={this.isPositive(dailyPercentage.video)}>{dailyPercentage.video}%</span></b>
-              </td>
-            </tr>
-            <tr>
-              <th colSpan="2">
                 <b>Other </b>
                 <span>{siteBytes.other}</span>
               </th>
@@ -169,16 +151,6 @@ class Result extends React.Component {
               <th colSpan="2">JavaScript</th>
               <td>Less than</td>
               <td><span>{budgetBytes.js}</span></td>
-            </tr>
-            <tr>
-              <th colSpan="2">Fonts</th>
-              <td>Less than</td>
-              <td><span>{budgetBytes.font}</span></td>
-            </tr>
-            <tr>
-              <th colSpan="2">Video</th>
-              <td>Less than</td>
-              <td><span>{budgetBytes.video}</span></td>
             </tr>
             <tr>
               <th colSpan="2">Other</th>
