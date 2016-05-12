@@ -49,7 +49,7 @@ class App extends React.Component {
       .then((response) => {
         if (response.statusCode >= 400) {
           this.setState({
-            error: response.statusCode
+            error: response
           });
         }
         else {
