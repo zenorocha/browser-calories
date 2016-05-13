@@ -8,7 +8,7 @@ class Loader extends JSXComponent {
         <img className="status-rays" src="../images/rays.png" alt="Rays" />
         <div className="status-msg">
           <p>Measuring</p>
-          <p>{this.props.url}</p>
+          <p>{this.config.url}</p>
         </div>
       </div>
     )
