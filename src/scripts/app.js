@@ -30,7 +30,7 @@ class App extends JSXComponent {
   }
 
   fetchURL() {
-    let api = 'https://calories.browserdiet.com/?url=' + encodeURIComponent(this.state.url);
+    let api = 'https://calories.browserdiet.com/?url=' + encodeURIComponent(this.url);
 
     fetch(api)
       .then((response) => {
@@ -51,14 +51,14 @@ class App extends JSXComponent {
   }
 
   render() {
-    if (this.state.success && this.state.budget) {
-      return <Result url={this.state.url} success={this.state.success} budget={this.state.budget} />;
+    if (this.success && this.budget) {
+      return <Result url={this.url} success={this.success} budget={this.budget} />;
     }
-    else if (this.state.error) {
-      return <Failure url={this.state.url} error={this.state.error} />;
+    else if (this.error) {
+      return <Failure url={this.url} error={this.error} />;
     }
     else {
-      return <Loader url={this.state.url} />;
+      return <Loader url={this.url} />;
     }
   }
 }
