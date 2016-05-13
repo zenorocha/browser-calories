@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Browser Calories",
-  "description": "Measure your performance budget",
+  "description": "The easiest way to measure your performance budget",
   "homepage_url": "https://github.com/zenorocha/browser-calories-chrome",
   "version": "1.2.1",
   "browser_action": {
