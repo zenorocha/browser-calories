@@ -1,6 +1,6 @@
-import React from 'react';
+import JSXComponent from 'metal-jsx';
 
-class Loader extends React.Component {
+class Loader extends JSXComponent {
   render() {
     return (
       <div className="status">

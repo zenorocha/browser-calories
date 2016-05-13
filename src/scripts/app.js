@@ -1,10 +1,10 @@
-import React from 'react';
+import JSXComponent from 'metal-jsx';
 import Loader from './loader';
 import Result from './result';
 import Failure from './failure';
 import defaultBudget from '../data/budget';
 
-class App extends React.Component {
+class App extends JSXComponent {
   constructor() {
     super();
 

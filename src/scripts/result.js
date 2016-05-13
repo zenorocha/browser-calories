@@ -1,7 +1,7 @@
-import React from 'react';
+import JSXComponent from 'metal-jsx';
 import bytes from 'byte-size';
 
-class Result extends React.Component {
+class Result extends JSXComponent {
   toBytes(data) {
     var obj = {};
 

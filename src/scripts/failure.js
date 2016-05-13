@@ -1,6 +1,6 @@
-import React from 'react';
+import JSXComponent from 'metal-jsx';
 
-class Failure extends React.Component {
+class Failure extends JSXComponent {
   render() {
     let title = `Error ${this.props.error.statusCode}`;
 
