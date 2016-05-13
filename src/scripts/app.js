@@ -15,7 +15,7 @@ class App extends JSXComponent {
       success: undefined
     };
   }
-  componentDidMount() {
+  attached() {
     this.getURL();
     this.getBudget();
   }
