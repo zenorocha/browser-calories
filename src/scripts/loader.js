@@ -3,10 +3,10 @@ import JSXComponent from 'metal-jsx';
 class Loader extends JSXComponent {
   render() {
     return (
-      <div className="status">
-        <img className="status-geek" src="../images/loader.png" alt="Geek" />
-        <img className="status-rays" src="../images/rays.png" alt="Rays" />
-        <div className="status-msg">
+      <div class="status">
+        <img class="status-geek" src="../images/loader.png" alt="Geek" />
+        <img class="status-rays" src="../images/rays.png" alt="Rays" />
+        <div class="status-msg">
           <p>Measuring</p>
           <p>{this.config.url}</p>
         </div>

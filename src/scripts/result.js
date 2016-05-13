@@ -53,17 +53,17 @@ class Result extends JSXComponent {
     let dailyPercentage = this.toPercentage(this.config.success, this.config.budget);
 
     return (
-      <div className="facts">
-        <header className="facts-header">
-          <h1 className="facts-title">Performance Facts</h1>
+      <div class="facts">
+        <header class="facts-header">
+          <h1 class="facts-title">Performance Facts</h1>
           <p>
             Serving Size 1 website
-            <a className="facts-url" href={this.config.url} title={this.config.url} target="_blank">{cleanUrl}</a>
+            <a class="facts-url" href={this.config.url} title={this.config.url} target="_blank">{cleanUrl}</a>
           </p>
         </header>
-        <table className="facts-table facts-table-main">
+        <table class="facts-table facts-table-main">
           <thead>
-            <tr className="small-info">
+            <tr class="small-info">
               <th colSpan="2">
                 Amount Per Serving
               </th>
@@ -79,7 +79,7 @@ class Result extends JSXComponent {
                 <span>{siteBytes.html}</span>
               </th>
               <td>
-                <b><span className={this.isPositive(dailyPercentage.html)}>{dailyPercentage.html}%</span></b>
+                <b><span class={this.isPositive(dailyPercentage.html)}>{dailyPercentage.html}%</span></b>
               </td>
             </tr>
             <tr>
@@ -88,7 +88,7 @@ class Result extends JSXComponent {
                 <span>{siteBytes.image}</span>
               </th>
               <td>
-                <b><span className={this.isPositive(dailyPercentage.image)}>{dailyPercentage.image}%</span></b>
+                <b><span class={this.isPositive(dailyPercentage.image)}>{dailyPercentage.image}%</span></b>
               </td>
             </tr>
             <tr>
@@ -97,7 +97,7 @@ class Result extends JSXComponent {
                 <span>{siteBytes.css}</span>
               </th>
               <td>
-                <b><span className={this.isPositive(dailyPercentage.css)}>{dailyPercentage.css}%</span></b>
+                <b><span class={this.isPositive(dailyPercentage.css)}>{dailyPercentage.css}%</span></b>
               </td>
             </tr>
             <tr>
@@ -106,7 +106,7 @@ class Result extends JSXComponent {
                 <span>{siteBytes.js}</span>
               </th>
               <td>
-                <b><span className={this.isPositive(dailyPercentage.js)}>{dailyPercentage.js}%</span></b>
+                <b><span class={this.isPositive(dailyPercentage.js)}>{dailyPercentage.js}%</span></b>
               </td>
             </tr>
             <tr>
@@ -115,7 +115,7 @@ class Result extends JSXComponent {
                 <span>{siteBytes.other}</span>
               </th>
               <td>
-                <b><span className={this.isPositive(dailyPercentage.other)}>{dailyPercentage.other}%</span></b>
+                <b><span class={this.isPositive(dailyPercentage.other)}>{dailyPercentage.other}%</span></b>
               </td>
             </tr>
             <tr>
@@ -124,13 +124,13 @@ class Result extends JSXComponent {
                 <span>{siteBytes.total}</span>
               </th>
               <td>
-                <b><span className={this.isPositive(dailyPercentage.total)}>{dailyPercentage.total}%</span></b>
+                <b><span class={this.isPositive(dailyPercentage.total)}>{dailyPercentage.total}%</span></b>
               </td>
             </tr>
           </tbody>
         </table>
-        <p className="facts-table-small-header small-info">* Values are based on the <a target="_blank" href="http://httparchive.org/interesting.php?a=All&l=May%201%202016&s=Top100">top 100 websites</a>, but feel free to <a onClick={this.openSettings}>change your performance budget</a>. These values may be higher or lower depending on your needs:</p>
-        <table className="facts-table facts-table-small small-info">
+        <p class="facts-table-small-header small-info">* Values are based on the <a target="_blank" href="http://httparchive.org/interesting.php?a=All&l=May%201%202016&s=Top100">top 100 websites</a>, but feel free to <a onClick={this.openSettings}>change your performance budget</a>. These values may be higher or lower depending on your needs:</p>
+        <table class="facts-table facts-table-small small-info">
           <tbody>
             <tr>
               <th colSpan="2">HTML</th>
@@ -164,7 +164,7 @@ class Result extends JSXComponent {
             </tr>
           </tbody>
         </table>
-        <p className="facts-table-small-footer small-info">
+        <p class="facts-table-small-footer small-info">
           This is an open source tool, contribute on <a href="https://github.com/zenorocha/browser-calories-chrome" target="_blank">GitHub</a><br />
           You can find tips to improve your website at <a href="https://browserdiet.com/en/" target="_blank">browserdiet.com</a>
         </p>
