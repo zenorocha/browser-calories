@@ -5,16 +5,6 @@ import Failure from './failure';
 import defaultBudget from '../data/budget';
 
 class App extends JSXComponent {
-  constructor() {
-    super();
-
-    this.state = {
-      url: undefined,
-      budget: undefined,
-      error: undefined,
-      success: undefined
-    };
-  }
   attached() {
     this.getURL();
     this.getBudget();
@@ -72,5 +62,12 @@ class App extends JSXComponent {
     }
   }
 }
+
+App.STATE = {
+  url: {},
+  budget: {},
+  error: {},
+  success: {}
+};
 
 export default App;
