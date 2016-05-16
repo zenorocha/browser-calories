@@ -26,7 +26,9 @@
     "build:styles": "node-sass src/styles/popup.scss dist/styles/popup.css -q",
     "watch": "parallelshell 'npm run watch:scripts' 'npm run watch:styles'",
     "watch:scripts": "onchange 'src/scripts/*.js' -- npm run build:scripts",
-    "watch:styles": "onchange 'src/styles/*.scss' -- npm run build:styles"
+    "watch:styles": "onchange 'src/styles/*.scss' -- npm run build:styles",
+    "package": "npm run package:firefox",
+    "package:firefox": "cd dist && zip -r ../browser-calories.xpi * && cd .."
   },
   "babel": {
     "plugins": [

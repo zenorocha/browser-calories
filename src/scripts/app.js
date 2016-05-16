@@ -22,12 +22,22 @@ class App extends JSXComponent {
   }
 
   getBudget() {
-    chrome.storage.local.get(defaultBudget, (data) => {
-      console.log(data);
-      this.setState({
-        budget: data
+    if (!chrome.storage.hasOwnProperty("sync")) {
+      // Firefox has no sync right now...
+      chrome.storage.local.get(defaultBudget, (data) => {
+        console.log(data);
+        this.setState({
+          budget: data
+        });
       });
-    });
+    } else {
+      chrome.storage.sync.get(defaultBudget, (data) => {
+        console.log(data);
+        this.setState({
+          budget: data
+        });
+      });
+    }
   }
 
   fetchURL() {
