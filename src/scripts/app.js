@@ -6,11 +6,13 @@ import defaultBudget from '../data/budget';
 
 class App extends JSXComponent {
   attached() {
+    console.log("Attached...");
     this.getURL();
     this.getBudget();
   }
 
   getURL() {
+    console.log("GetURL...");
     chrome.tabs.query({
       active: true,
       currentWindow: true
@@ -22,6 +24,7 @@ class App extends JSXComponent {
   }
 
   getBudget() {
+    console.log("GetBudget...");
     chrome.storage.sync.get(defaultBudget, (data) => {
       this.setState({
         budget: data
@@ -30,19 +33,27 @@ class App extends JSXComponent {
   }
 
   fetchURL() {
+    console.log("fetchURL...");
     let api = 'https://calories.browserdiet.com/?url=' + encodeURIComponent(this.url);
 
     fetch(api)
       .then((response) => {
+        console.log("return from fetch");
+        console.log(response);
         return response.json();
       })
       .then((response) => {
-        if (response.statusCode >= 400) {
+        console.log("after fetch");
+        console.log(response);
+        
+        // Response doesn't contain status code in here.
+        if (!response.hasOwnProperty("html") ) {
+          console.log("error!!!!");
           this.setState({
             error: response
-          });
-        }
-        else {
+          });         
+        } else {
+          console.log("success");
           this.setState({
             success: response
           });
@@ -51,13 +62,22 @@ class App extends JSXComponent {
   }
 
   render() {
+    /*
+    State is not being set or accessed. All calls such as `this.success` return undefined.
+    */
+    console.log("Render...");
+    console.log(this.success);
+    console.log(this.budget);
     if (this.success && this.budget) {
+      console.log("success on render");
       return <Result url={this.url} success={this.success} budget={this.budget} />;
     }
     else if (this.error) {
+      console.log("fail on render");
       return <Failure url={this.url} error={this.error} />;
     }
     else {
+      console.log("loader on render: " + this.url); 
       return <Loader url={this.url} />;
     }
   }

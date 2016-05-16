@@ -47,6 +47,7 @@ class Result extends JSXComponent {
   }
 
   render() {
+    console.log("render result");
     let cleanUrl = this.config.url.replace(/^http(s)?\:\/\/(www.)?/i, "").replace(/\/$/, "");
     let siteBytes = this.toBytes(this.config.success);
     let budgetBytes = this.toBytes(this.config.budget);
