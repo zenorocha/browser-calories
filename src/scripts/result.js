@@ -129,7 +129,7 @@ class Result extends JSXComponent {
             </tr>
           </tbody>
         </table>
-        <p class="facts-table-small-header small-info">* Values are based on the <a target="_blank" href="http://httparchive.org/interesting.php?a=All&l=May%201%202016&s=Top100">top 100 websites</a>, but feel free to <a onClick={this.openSettings}>change your performance budget</a>. These values may be higher or lower depending on your needs:</p>
+        <p class="facts-table-small-header small-info">* Values are based on the <a target="_blank" href="http://httparchive.org/interesting.php?a=All&l=May%201%202016&s=Top100">top 100 websites</a>, but feel free to <a data-onclick={this.openSettings}>change your performance budget</a>. These values may be higher or lower depending on your needs:</p>
         <table class="facts-table facts-table-small small-info">
           <tbody>
             <tr>
