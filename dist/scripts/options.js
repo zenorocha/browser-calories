@@ -36,8 +36,7 @@ function saveBudget(e) {
     other : parseInt(e.target.other.value, 10)
   };
 
-  budget.total = budget.html + budget.image + budget.css +
-    budget.js + budget.font + budget.video + budget.other;
+  budget.total = budget.html + budget.image + budget.css + budget.js + budget.other;
 
   chrome.storage.sync.set(budget, function() {
     var status = document.querySelector('.status');
