@@ -26,14 +26,12 @@ class App extends JSXComponent {
       // Firefox has no sync right now...
       // The bug tracking this implementation is at https://bugzilla.mozilla.org/show_bug.cgi?id=1220494
       chrome.storage.local.get(defaultBudget, (data) => {
-        console.log(data);
         this.setState({
           budget: data
         });
       });
     } else {
       chrome.storage.sync.get(defaultBudget, (data) => {
-        console.log(data);
         this.setState({
           budget: data
         });
