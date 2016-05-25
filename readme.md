@@ -1,6 +1,14 @@
-# Browser Calories for Chrome
+# Browser Calories
 
-> A Chrome extension to measure your performance budget.
+> The easiest way to measure your performance budget.
+
+## Install
+
+This browser extension available for:
+
+| <a href="https://chrome.google.com/webstore/detail/browser-calories/pdkibgfjegigkoaleelbkdpkgceljfco"><img src="https://cloud.githubusercontent.com/assets/398893/15528951/e9f5dc0a-21fd-11e6-86e7-8a0cad6e7548.png" width="48px" height="48px" alt="Chrome logo"></a> | <a href="https://addons.mozilla.org/en-US/firefox/addon/browser-calories/"><img src="https://cloud.githubusercontent.com/assets/398893/15528952/ea095cc6-21fd-11e6-9aae-d67479edd442.png" width="48px" height="48px" alt="Firefox logo"></a> | <a href="https://addons.opera.com/en/extensions/details/browser-calories"><img src="https://cloud.githubusercontent.com/assets/398893/15528953/ea1ef482-21fd-11e6-9ba2-252aa0bcc1d2.png" width="48px" height="48px" alt="Opera logo"></a> |
+|:---:|:---:|:---:|
+| [Chrome](https://chrome.google.com/webstore/detail/browser-calories/pdkibgfjegigkoaleelbkdpkgceljfco) | [Firefox](https://addons.mozilla.org/en-US/firefox/addon/browser-calories/) | [Opera](https://addons.opera.com/en/extensions/details/browser-calories) |
 
 ## Setup
 
@@ -16,7 +24,7 @@ npm install
 npm start
 ```
 
-## Chrome testing
+###### Blink (Chrome or Opera)
 
 3) Go to `chrome://extensions`
 
@@ -24,15 +32,13 @@ npm start
 
 5) Select the `dist` folder
 
-## Firefox testing (Requires firefox dev edition or nightly)
+###### Gecko (Firefox)
 
 3) Go to `about:debugging`
 
 4) Click on `Load temporary Add-on`
 
 5) Select the `manifest.json` inside the `dist` folder
-
-More info at [MDN - Packaging and Running WebExtensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Packaging_and_Installation)
 
 ## Credits
 
