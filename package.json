@@ -13,10 +13,12 @@
     "babel-preset-metal-jsx": "^0.0.2",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
+    "metal-component": "^1.0.0-rc.12",
     "node-sass": "^3.4.2",
     "onchange": "^2.2.0",
     "parallelshell": "^2.0.0",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "zip-folder": "^1.0.0"
   },
   "scripts": {
     "start": "npm run build",
@@ -25,6 +27,8 @@
     "build:styles": "node-sass src/styles/popup.scss dist/styles/popup.css -q",
     "watch": "parallelshell 'npm run watch:scripts' 'npm run watch:styles'",
     "watch:scripts": "onchange 'src/scripts/*.js' -- npm run build:scripts",
-    "watch:styles": "onchange 'src/styles/*.scss' -- npm run build:styles"
+    "watch:styles": "onchange 'src/styles/*.scss' -- npm run build:styles",
+    "package": "npm run package:firefox",
+    "package:firefox": "node tools/firefox-xpi-packager.js"
   }
 }

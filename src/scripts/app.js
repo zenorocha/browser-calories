@@ -22,11 +22,21 @@ class App extends JSXComponent {
   }
 
   getBudget() {
-    chrome.storage.sync.get(defaultBudget, (data) => {
-      this.setState({
-        budget: data
+    if (!chrome.storage.hasOwnProperty("sync")) {
+      // Firefox has no sync right now...
+      // The bug tracking this implementation is at https://bugzilla.mozilla.org/show_bug.cgi?id=1220494
+      chrome.storage.local.get(defaultBudget, (data) => {
+        this.setState({
+          budget: data
+        });
       });
-    });
+    } else {
+      chrome.storage.sync.get(defaultBudget, (data) => {
+        this.setState({
+          budget: data
+        });
+      });
+    }
   }
 
   fetchURL() {
@@ -37,17 +47,20 @@ class App extends JSXComponent {
         return response.json();
       })
       .then((response) => {
-        if (response.statusCode >= 400) {
-          this.setState({
-            error: response
+
+        document.body.style.overflow = "auto"; // get the scrollbars back for the long table.
+
+        // Response doesn't contain status code in here.
+        if (!response.hasOwnProperty("html") ) {
+              this.setState({
+                error: response
+              });
+            } else {
+              this.setState({
+                success: response
+              });
+            }
           });
-        }
-        else {
-          this.setState({
-            success: response
-          });
-        }
-      });
   }
 
   render() {

@@ -4,8 +4,15 @@
   "description": "The easiest way to measure your performance budget",
   "homepage_url": "https://github.com/zenorocha/browser-calories-chrome",
   "version": "1.2.4",
+  "applications": {
+    "gecko": {
+      "id": "calories@browserdiet.com",
+      "strict_min_version": "45.0"
+    }
+  },
   "browser_action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": "images/icon-48.png"
   },
   "icons": {
     "16" : "images/icon-16.png",

@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', restoreBudget);
 
+// Firefox has no sync yet. Cue: https://bugzilla.mozilla.org/show_bug.cgi?id=1220494
+var chromeStorage = chrome.storage.sync || chrome.storage.local;
+
 var defaultBudget = {
   "html"  : 62000,
   "image" : 1001000,
@@ -16,7 +19,7 @@ function restoreBudget() {
   form.addEventListener('submit', saveBudget);
   reset.addEventListener('click', resetBudget);
 
-  chrome.storage.sync.get(defaultBudget, function(data) {
+  chromeStorage.get(defaultBudget, function(data) {
     form.html.value  = data.html;
     form.image.value = data.image;
     form.css.value   = data.css;
@@ -38,7 +41,7 @@ function saveBudget(e) {
 
   budget.total = budget.html + budget.image + budget.css + budget.js + budget.other;
 
-  chrome.storage.sync.set(budget, function() {
+  chromeStorage.set(budget, function() {
     var status = document.querySelector('.status');
     status.style.display = 'inline-block';
 
