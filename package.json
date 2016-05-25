@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "byte-size": "^2.0.0",
+    "metal-component": "^1.0.0-rc.12",
     "metal-jsx": "^1.0.0-rc.9"
   },
   "devDependencies": {
@@ -13,7 +14,6 @@
     "babel-preset-metal-jsx": "^0.0.2",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
-    "metal-component": "^1.0.0-rc.12",
     "node-sass": "^3.4.2",
     "onchange": "^2.2.0",
     "parallelshell": "^2.0.0",
