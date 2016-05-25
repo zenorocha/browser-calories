@@ -165,7 +165,7 @@ class Result extends JSXComponent {
           </tbody>
         </table>
         <p class="facts-table-small-footer small-info">
-          This is an open source tool, contribute on <a href="https://github.com/zenorocha/browser-calories-chrome" target="_blank">GitHub</a><br />
+          This is an open source tool, contribute on <a href="https://github.com/zenorocha/browser-calories" target="_blank">GitHub</a><br />
           You can find tips to improve your website at <a href="https://browserdiet.com/en/" target="_blank">browserdiet.com</a>
         </p>
       </div>

@@ -1,5 +1,5 @@
 {
-  "name": "browser-calories-chrome",
+  "name": "browser-calories",
   "version": "1.2.4",
   "description": "The easiest way to measure your performance budget",
   "main": "src/scripts/popup.js",
