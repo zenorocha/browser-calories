@@ -17,8 +17,7 @@
     "node-sass": "^3.4.2",
     "onchange": "^2.2.0",
     "parallelshell": "^2.0.0",
-    "watchify": "^3.7.0",
-    "zip-folder": "^1.0.0"
+    "watchify": "^3.7.0"
   },
   "scripts": {
     "start": "npm run build",
@@ -28,7 +27,8 @@
     "watch": "parallelshell 'npm run watch:scripts' 'npm run watch:styles'",
     "watch:scripts": "onchange 'src/scripts/*.js' -- npm run build:scripts",
     "watch:styles": "onchange 'src/styles/*.scss' -- npm run build:styles",
-    "package": "npm run package:firefox",
-    "package:firefox": "node tools/firefox-xpi-packager.js"
+    "package": "npm run package:blink && npm run package:gecko",
+    "package:blink": "cd dist && zip -r ../browser-calories.zip * && cd ..",
+    "package:gecko": "cd dist && zip -r ../browser-calories.xpi * && cd .."
   }
 }
