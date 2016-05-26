@@ -47,9 +47,6 @@ class App extends JSXComponent {
         return response.json();
       })
       .then((response) => {
-
-        document.body.style.overflow = "auto"; // get the scrollbars back for the long table.
-
         // Response doesn't contain status code in here.
         if (!response.hasOwnProperty("html") ) {
               this.setState({

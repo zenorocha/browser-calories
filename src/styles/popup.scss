@@ -4,7 +4,7 @@ body {
   font-size: small;
   line-height: 1.4;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -18,7 +18,7 @@ p {
 }
 
 #wrapper {
-  width: 338px;
+  width: 325px;
 }
 
 @import 'result.scss';
