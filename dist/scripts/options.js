@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', restoreBudget);
 
-// Firefox has no sync yet. Cue: https://bugzilla.mozilla.org/show_bug.cgi?id=1220494
+// Firefox has no sync yet.
+// Cue: https://bugzilla.mozilla.org/show_bug.cgi?id=1220494
 var chromeStorage = chrome.storage.sync || chrome.storage.local;
 
 var defaultBudget = {

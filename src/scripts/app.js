@@ -22,21 +22,15 @@ class App extends JSXComponent {
   }
 
   getBudget() {
-    if (!chrome.storage.hasOwnProperty("sync")) {
-      // Firefox has no sync right now...
-      // The bug tracking this implementation is at https://bugzilla.mozilla.org/show_bug.cgi?id=1220494
-      chrome.storage.local.get(defaultBudget, (data) => {
-        this.setState({
-          budget: data
-        });
+    // Firefox has no sync yet.
+    // Cue: https://bugzilla.mozilla.org/show_bug.cgi?id=1220494
+    let chromeStorage = chrome.storage.sync || chrome.storage.local;
+
+    chromeStorage.get(defaultBudget, (data) => {
+      this.setState({
+        budget: data
       });
-    } else {
-      chrome.storage.sync.get(defaultBudget, (data) => {
-        this.setState({
-          budget: data
-        });
-      });
-    }
+    });
   }
 
   fetchURL() {
