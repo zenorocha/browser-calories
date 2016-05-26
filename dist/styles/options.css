@@ -1,3 +1,13 @@
+body {
+  font-family: "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+
+.description {
+  color: grey;
+  font-size: 13px;
+  font-style: italic;
+}
+
 .input-container {
   clear: both;
   display: block;
@@ -6,16 +16,12 @@
 
 .input-container label {
   display: inline-block;
+  font-size: 12px;
   width: 65px;
 }
 
 .input-container input[type='number'] {
   width: 100px;
-}
-
-.description {
-  color: grey;
-  font-style: italic;
 }
 
 .button {
@@ -26,6 +32,7 @@
 
 .status {
   display: none;
-  margin-left: 5px;
+  font-size: 12px;
   font-style: italic;
+  margin-left: 5px;
 }
