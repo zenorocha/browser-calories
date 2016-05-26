@@ -1,10 +1,9 @@
 # Browser Calories
 
-> The easiest way to measure your performance budget.
-
-
 [![Build Status](http://img.shields.io/travis/zenorocha/browser-calories/master.svg?style=flat)](https://travis-ci.org/zenorocha/browser-calories)
 ![Perf Matters](https://img.shields.io/badge/perf-matters-brightgreen.svg?style=flat)
+
+> The easiest way to measure your performance budget.
 
 ## Install
 
@@ -16,43 +15,45 @@ This browser extension available for:
 
 ## Setup
 
-1) Install dependencies:
+Install dependencies:
 
 ```
 npm install
 ```
 
-2) Compile scripts and styles:
+Compile scripts and styles:
 
 ```
 npm start
 ```
 
+## Testing
+
 ###### Chrome
 
-3) Go to `chrome://extensions`
+1. Navigate to `chrome://extensions`
 
-4) Click on `Load unpacked extension...`
+2. Click on `Load unpacked extension...`
 
-5) Select the `dist` folder
+3. Select the `dist` folder
 
 ###### Firefox
 
-3) Go to `about:debugging`
+1. Navigate to `about:debugging`
 
-4) Click on `Load temporary Add-on`
+2. Click on `Load temporary Add-on`
 
-5) Select the `manifest.json` inside the `dist` folder
+3. Select the `manifest.json` inside the `dist` folder
 
 ###### Opera
 
-3) Go to `extensions`
+1. Navigate to `extensions`
 
-4) Click on `Developer Mode`
+2. Click on `Developer Mode`
 
-5) Click on `Load unpacked extension...`
+3. Click on `Load unpacked extension...`
 
-6) Select the `dist` folder
+4. Select the `dist` folder
 
 ## Credits
 
