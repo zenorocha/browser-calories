@@ -28,7 +28,7 @@ npm install
 npm start
 ```
 
-###### Blink (Chrome or Opera)
+###### Chrome
 
 3) Go to `chrome://extensions`
 
@@ -36,13 +36,23 @@ npm start
 
 5) Select the `dist` folder
 
-###### Gecko (Firefox)
+###### Firefox
 
 3) Go to `about:debugging`
 
 4) Click on `Load temporary Add-on`
 
 5) Select the `manifest.json` inside the `dist` folder
+
+###### Opera
+
+3) Go to `extensions`
+
+4) Click on `Developer Mode`
+
+5) Click on `Load unpacked extension...`
+
+6) Select the `dist` folder
 
 ## Credits
 
