@@ -43,7 +43,11 @@ class Result extends JSXComponent {
   }
 
   openSettings() {
-    chrome.runtime.openOptionsPage();
+    // Firefox has not completed the implementation of runtime
+    // Cue: https://bugzilla.mozilla.org/show_bug.cgi?id=1213473
+    let chromeRuntime = chrome.runtime || runtime;
+
+    chromeRuntime.openOptionsPage();
   }
 
   render() {
