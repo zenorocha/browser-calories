@@ -5,6 +5,8 @@
 
 > The easiest way to measure your performance budget.
 
+[![Browser Calories](https://cloud.githubusercontent.com/assets/398893/15591790/09e9a616-2354-11e6-9c43-4eb3b336cff1.jpg)](https://browserdiet.com/calories/)
+
 ## Install
 
 This browser extension available for:
