@@ -47,17 +47,16 @@ class App extends JSXComponent {
         return response.json();
       })
       .then((response) => {
-        // Response doesn't contain status code in here.
-        if (!response.hasOwnProperty("html") ) {
-              this.setState({
-                error: response
-              });
-            } else {
-              this.setState({
-                success: response
-              });
-            }
+        if (response.statusCode >= 400) {
+          this.setState({
+            error: response
           });
+        } else {
+          this.setState({
+            success: response
+          });
+        }
+      });
   }
 
   render() {
