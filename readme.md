@@ -2,6 +2,10 @@
 
 > The easiest way to measure your performance budget.
 
+
+[![Build Status](http://img.shields.io/travis/zenorocha/browser-calories/master.svg?style=flat)](https://travis-ci.org/zenorocha/browser-calories)
+![Perf Matters](https://img.shields.io/badge/perf-matters-brightgreen.svg?style=flat)
+
 ## Install
 
 This browser extension available for:
