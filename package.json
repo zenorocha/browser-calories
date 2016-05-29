@@ -1,6 +1,6 @@
 {
   "name": "browser-calories",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "The easiest way to measure your performance budget",
   "main": "src/scripts/popup.js",
   "repository": "zenorocha/browser-calories",
