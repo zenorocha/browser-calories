@@ -22,7 +22,6 @@
 .status-msg {
   background: #e60014;
   color: #ffde00;
-  font-family: 'Open Sans',sans-serif;
   padding: 10px;
   text-align: center;
 
@@ -39,6 +38,7 @@
   a {
     color: #ffde00;
     border-bottom: 1px solid #ffde00;
+    text-decoration: none;
   }
 }
 
