@@ -34,20 +34,24 @@ class App extends JSXComponent {
   }
 
   fetchURL() {
-    let api = 'https://calories.browserdiet.com/?url=' + encodeURIComponent(this.url);
+    let endpoint = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=' + encodeURIComponent(this.url);
 
-    fetch(api)
+    if (process.env.API_KEY) {
+      endpoint += `&key=${process.env.API_KEY}`;
+    }
+
+    fetch(endpoint)
       .then((response) => {
         return response.json();
       })
       .then((response) => {
-        if (response.statusCode >= 400) {
+        if (response.error) {
           this.setState({
-            error: response
+            error: response.error
           });
         } else {
           this.setState({
-            success: response
+            success: response.pageStats
           });
         }
       });

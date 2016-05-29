@@ -2,6 +2,20 @@ import JSXComponent from 'metal-jsx';
 import bytes from 'byte-size';
 
 class Result extends JSXComponent {
+  toInt(data) {
+    var result = {
+      html  : parseInt(data.htmlResponseBytes, 10) || 0,
+      css   : parseInt(data.cssResponseBytes, 10) || 0,
+      image : parseInt(data.imageResponseBytes, 10) || 0,
+      js    : parseInt(data.javascriptResponseBytes, 10) || 0,
+      other : parseInt(data.otherResponseBytes, 10) || 0
+    };
+
+    result.total = result.html + result.image + result.css + result.js + result.other;
+
+    return result;
+  }
+
   toBytes(data) {
     var obj = {};
 
@@ -52,9 +66,10 @@ class Result extends JSXComponent {
 
   render() {
     let cleanUrl = this.config.url.replace(/^http(s)?\:\/\/(www.)?/i, "").replace(/\/$/, "");
-    let siteBytes = this.toBytes(this.config.success);
+    let siteStats = this.toInt(this.config.success);
+    let siteBytes = this.toBytes(siteStats);
     let budgetBytes = this.toBytes(this.config.budget);
-    let dailyPercentage = this.toPercentage(this.config.success, this.config.budget);
+    let dailyPercentage = this.toPercentage(siteStats, this.config.budget);
 
     return (
       <div class="facts">

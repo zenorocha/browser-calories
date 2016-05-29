@@ -15,6 +15,7 @@
     "babel-preset-metal-jsx": "^0.0.3",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
+    "envify": "^3.4.0",
     "node-sass": "^3.7.0",
     "onchange": "^2.4.0",
     "parallelshell": "^2.0.0",
@@ -23,7 +24,7 @@
   "scripts": {
     "start": "npm run build",
     "build": "npm run build:scripts && npm run build:styles",
-    "build:scripts": "browserify src/scripts/popup.js -t [ babelify --presets [ es2015 metal-jsx ] ] -o dist/scripts/popup.js",
+    "build:scripts": "browserify src/scripts/popup.js -t [ babelify --presets [ es2015 metal-jsx ] ] -t [ envify ] -o dist/scripts/popup.js",
     "build:styles": "node-sass src/styles/popup.scss dist/styles/popup.css -q",
     "watch": "parallelshell 'npm run watch:scripts' 'npm run watch:styles'",
     "watch:scripts": "onchange 'src/scripts/*.js' -- npm run build:scripts",
