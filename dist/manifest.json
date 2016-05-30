@@ -3,7 +3,7 @@
   "name": "Browser Calories",
   "description": "The easiest way to measure your performance budget",
   "homepage_url": "https://github.com/zenorocha/browser-calories",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "applications": {
     "gecko": {
       "id": "calories@browserdiet.com",
