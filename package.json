@@ -6,20 +6,20 @@
   "repository": "zenorocha/browser-calories",
   "license": "MIT",
   "dependencies": {
-    "byte-size": "^2.0.0",
-    "metal-component": "^1.0.0-rc.16",
-    "metal-jsx": "^1.0.0-rc.12"
+    "byte-size": "2.0.0",
+    "metal-component": "1.0.0-rc.16",
+    "metal-jsx": "1.0.0-rc.12"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-metal-jsx": "^0.0.3",
-    "babelify": "^7.3.0",
-    "browserify": "^13.0.1",
-    "envify": "^3.4.0",
-    "node-sass": "^3.7.0",
-    "onchange": "^2.4.0",
-    "parallelshell": "^2.0.0",
-    "watchify": "^3.7.0"
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-metal-jsx": "0.0.3",
+    "babelify": "7.3.0",
+    "browserify": "13.0.1",
+    "envify": "3.4.0",
+    "node-sass": "3.7.0",
+    "onchange": "2.4.0",
+    "parallelshell": "2.0.0",
+    "watchify": "3.7.0"
   },
   "scripts": {
     "start": "npm run build",
