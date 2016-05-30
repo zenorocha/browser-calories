@@ -22,7 +22,7 @@
   "permissions": [
     "activeTab",
     "storage",
-    "https://calories.browserdiet.com/"
+    "https://www.googleapis.com/"
   ],
   "options_ui": {
     "page": "options.html",
